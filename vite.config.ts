@@ -14,7 +14,24 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
-  }
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
+
+  build: {
+    lib: {
+      entry: 'src/index.ts',
+      name: 'DkuVueDesignSystem',
+      fileName: (format) => `index.${format}.js`,
+      formats: ['es', 'cjs'],
+    },
+    rollupOptions: {
+      external: ['vue'],
+      output: {
+        globals: {
+          vue: 'Vue',
+        },
+      },
+    },
+  },
 })

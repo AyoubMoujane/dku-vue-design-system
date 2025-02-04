@@ -1,0 +1,17 @@
+{
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+      "noEmit": false,
+      "declaration": true,
+      "emitDeclarationOnly": true,
+      "outDir": "dist/types",
+      "isolatedModules": false
+    },
+  
+    "include": [
+      "src/components/**/*.vue",
+      "src/components/**/*.ts",
+      "src/components/**/*.tsx"
+    ]  
+}
+  

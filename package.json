@@ -1,14 +1,16 @@
 {
-  "name": "dku-vue-design-system",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@ayoubmoujane/dku-vue-design-system",
+  "private": false,
+  "version": "0.1.0",
   "type": "module",
+  "files": ["dist"],
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "build": "vite build && vue-tsc -p tsconfig.build.json",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "release": "npm publish --access public"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

@@ -18,6 +18,10 @@ const props = withDefaults(defineProps<{
    * background color of the button
    */
   backgroundColor?: string,
+  /**
+ * background color of the button
+ */
+  size?: string,
 
 }>(), { primary: false });
 

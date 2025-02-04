@@ -8,7 +8,7 @@ const meta = {
   // This component will have an automatically generated docsPage entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
   argTypes: {
-    variant: { options: ['primary','secondary', 'ghost', 'outline', 'link'] }
+    variant: { options: ['default','secondary', 'ghost', 'outline', 'link'] }
   },
 } satisfies Meta<typeof Button>;
 
