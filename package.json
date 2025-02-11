@@ -1,9 +1,14 @@
 {
   "name": "@ayoubmoujane/dku-vue-design-system",
-  "private": false,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
-  "files": ["dist"],
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist",
+    "package.json"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build && vue-tsc -p tsconfig.build.json",
