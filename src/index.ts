@@ -14,4 +14,11 @@ export { default as SelectSeparator } from './components/ui/select/SelectSeparat
 export { default as SelectTrigger } from './components/ui/select/SelectTrigger.vue'
 export { default as SelectValue } from './components/ui/select/SelectValue.vue'
 
+export { default as Accordion } from './components/ui/accordion/Accordion.vue';
+export { default as AccordionContent } from './components/ui/accordion/AccordionContent.vue';
+export { default as AccordionItem } from './components/ui/accordion/AccordionItem.vue';
+export { default as AccordionTrigger } from './components/ui/accordion/AccordionTrigger.vue';
+
+export { default as Input } from './components/ui/input/Input.vue';
+
 export type Testing = number | string
