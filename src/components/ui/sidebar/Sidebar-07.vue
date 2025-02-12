@@ -105,10 +105,10 @@ function toggleSidebar() {
                 </SidebarMenuItem>
               </Collapsible>
             </div>
-            <div v-if="selectedItem == 'Creation'" class="w-full h-72 bg-muted/50">
+            <div v-if="selectedItem == 'Creation' && !isCollapsed" class="w-full h-72 bg-muted/50">
               Creation
             </div>
-            <div v-if="selectedItem == 'Exploration'" class="w-full h-72 bg-muted/50">
+            <div v-if="selectedItem == 'Exploration' && !isCollapsed" class="w-full h-72 bg-muted/50">
               Exploration
             </div>
           </SidebarMenu>
