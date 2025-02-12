@@ -72,4 +72,7 @@ export { default as CardFooter } from './components/ui/card/CardFooter.vue'
 export { default as CardHeader } from './components/ui/card/CardHeader.vue'
 export { default as CardTitle } from './components/ui/card/CardTitle.vue'
 
+export { default as Slider } from './components/ui/slider/Slider.vue'
+
+
 export type Testing = number | string
