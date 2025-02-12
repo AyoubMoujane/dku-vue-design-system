@@ -1,6 +1,6 @@
 # dku-vue-design-system 🎨
 
-This repository is a **Vue 3** + **TypeScript** + **Vite** project that serves as a **component library**. It also includes **Storybook** 📖 for building and documenting UI components in isolation.
+This repository is a **Vue 3** + **TypeScript** + **Vite** project that serves as a **component library**. It also includes **Storybook** 📖 for building and documenting UI components in isolation. The components are imported from [shadcn-vue.com](https://shadcn-vue.com)
 
 ## Table of Contents 📑
 
@@ -9,7 +9,6 @@ This repository is a **Vue 3** + **TypeScript** + **Vite** project that serves a
   - [Prerequisites ✅](#prerequisites-)
   - [Installation 💻](#installation-)
 - [Scripts](#scripts)
-  - [Development 🧑‍💻](#development-)
   - [Storybook 📚](#storybook-)
   - [Release 🚢](#release-)
 - [Usage 📌](#usage-)
@@ -25,7 +24,7 @@ This repository is a **Vue 3** + **TypeScript** + **Vite** project that serves a
 This repository contains:
 1. A **Vue 3** + **TypeScript** + **Vite** setup for building reusable components.
 2. A **Storybook** environment for documenting and testing these components in isolation.
-3. Various **UI elements** (Button, Select, Accordion, Input, etc.) ready to be imported and used in other Vue projects.
+3. Various **UI elements** (Button, Select, Accordion, Input, etc.) ready to be imported and used in other Vue projects. The library's components are based on [shadcn-vue.com](https://shadcn-vue.com)
 
 ---
 
@@ -50,10 +49,6 @@ This repository contains:
 ## Scripts
 
 All scripts can be run from the project’s root directory.
-
-### Development 🧑‍💻
-
-*(Add your development script details here if needed!)*
 
 ### Storybook 📚
 
@@ -98,8 +93,6 @@ import { Button } from '@ayoubmoujane/dku-vue-design-system'
   <Button>Click Me</Button>
 </template>
 ```
-
-If not published, you can use local linking (`pnpm link --global`) or a file reference (e.g. `pnpm add file:../dku-vue-design-system`).
 
 ### Examples 💡
 
