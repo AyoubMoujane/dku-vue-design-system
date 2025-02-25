@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import { Label } from '@/components/ui/label'
 import { RadioGroup } from '@/components/ui/radio-group'
 import RadioGroupItemWithText from './RadioGroupItemWithText.vue' // Adjust path as needed
 </script>
 
 <template>
-  <RadioGroup default-value="comfortable">
+  <RadioGroup default-value="option2">
     <RadioGroupItemWithText
       id="r1"
       value="option1"
@@ -18,18 +17,14 @@ import RadioGroupItemWithText from './RadioGroupItemWithText.vue' // Adjust path
       value="option2"
       label-text="Option 2"
     />
-    <div class="flex flex-col">
-      <Label for="r3" class="mb-1.5 text-[#CE1228]">
-        Error message
-      </Label>
-      <RadioGroupItemWithText
-        id="r3"
-        value="option3"
-        :is-in-error="true"
-        label-text="Option 3"
-        description="Description for option 3"
-      />
-    </div>
+    <RadioGroupItemWithText
+      id="r3"
+      value="option3"
+      :is-in-error="true"
+      label-text="Option 3"
+      description="Description for option 3"
+      error-message="Error message"
+    />
     <RadioGroupItemWithText
       id="r4"
       value="option4"
