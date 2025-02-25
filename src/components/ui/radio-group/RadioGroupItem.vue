@@ -40,7 +40,7 @@ const onMouseUp = () => {
 
 <template>
   <RadioGroupItem v-bind="forwardedProps" :class="cn(
-    'aspect-square h-4 w-4 rounded-full border ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+    'relative aspect-square h-4 w-4 rounded-full border ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 data-[state=unchecked]:hover:text-[#EEEEEE] data-[state=unchecked]:text-transparent',
     {
       // Unselected states
       'data-[state=unchecked]:border-[#5B5B5B]': !props.disabled && !props.isInError,
@@ -57,10 +57,8 @@ const onMouseUp = () => {
     },
     props.class
   )" @mousedown="onMouseDown" @mouseup="onMouseUp" @mouseleave="onMouseUp">
-    <RadioGroupIndicator :class="cn('flex items-center justify-center ', {
-      // Unselected states
-      'text-red-500': props.isInError && !props.disabled,
-      'text-gray-400': props.disabled,
+    <!-- Indicator for checked state -->
+    <RadioGroupIndicator :class="cn('flex items-center justify-center peer', {
       // Selected states
       'data-[state=checked]:text-[#214AB5]': isPressed && !props.isInError,
       // Error states
@@ -68,9 +66,16 @@ const onMouseUp = () => {
       'hover:text-[#9C0C1D]': props.isInError && !props.disabled,
       // Others
       'text-[#E5E5E5]': props.disabled,
-    })
-      ">
+    })">
       <Circle :class="cn('h-2.5 w-2.5 fill-current')" />
     </RadioGroupIndicator>
+
+    <!-- Grey circle for hover on unselected state -->
+    <div :class="cn(
+      'absolute inset-0 flex items-center justify-center',
+      'peer-data-[state=checked]:hidden',
+    )">
+      <Circle class="h-2.5 w-2.5 fill-current" />
+    </div>
   </RadioGroupItem>
 </template>
