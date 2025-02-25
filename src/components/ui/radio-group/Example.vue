@@ -6,12 +6,14 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 <template>
   <RadioGroup default-value="comfortable">
     <div class="flex items-center space-x-2">
-      <RadioGroupItem id="r1" value="default" disabled />
-      <Label for="r1">Default</Label>
+      <RadioGroupItem class="peer" id="r1" value="default" disabled />
+      <div class="flex flex-col peer-data-[disabled]:text-[#E5E5E5] peer-not-data-[disabled]:hover:text-[#143384]">
+        <Label for="r1">Default</Label>
+      </div>
     </div>
     <div class="flex items-center space-x-2">
       <RadioGroupItem id="r2" value="comfortable" />
-      <Label for="r2">Comfortable</Label>
+      <Label for="r2" class="hover:text-[#143384]">Comfortable</Label>
     </div>
     <div class="flex flex-col">
       <Label for="r3" class="mb-1.5 text-[#CE1228]">
@@ -19,12 +21,15 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
       </Label>
       <div class="flex items-center space-x-2">
         <RadioGroupItem class="peer" id="r3" value="compact" :is-in-error="true" />
-        <Label for="r3" class="peer-data-[state=checked]:text-[#143384]">Compact</Label>
+        <div class="flex flex-col">
+          <Label for="r3" class="hover:text-[#143384]">Compact</Label>
+          <Label for="r3" class="text-xs text-[#666666]">Text description for the label</Label>
+        </div>
       </div>
     </div>
     <div class="flex items-center space-x-2">
       <RadioGroupItem id="r4" value="other" />
-      <Label for="r4">Other</Label>
+      <Label for="r4" class="hover:text-[#143384]">Other</Label>
     </div>
   </RadioGroup>
 </template>
