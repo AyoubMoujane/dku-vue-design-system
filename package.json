@@ -23,12 +23,14 @@
     "clsx": "^2.1.1",
     "lucide-vue-next": "^0.473.0",
     "radix-vue": "^1.9.12",
+    "reka-ui": "^2.0.2",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
     "vue": "^3.5.13"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.4",
+    "@internationalized/date": "^3.7.0",
     "@storybook/addon-essentials": "^8.5.0",
     "@storybook/addon-interactions": "^8.5.0",
     "@storybook/addon-onboarding": "^8.5.0",
