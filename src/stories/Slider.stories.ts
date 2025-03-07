@@ -39,7 +39,7 @@ export const Basic: Story = {
   }),
 }
 
-export const WithIndicator: Story = {
+export const Disabled: Story = {
   render: (args) => ({
     components: { Slider },
     setup() {
@@ -49,10 +49,7 @@ export const WithIndicator: Story = {
     },
     template: `
       <div class="p-4 w-[300px]">
-        <p class="mb-2 text-sm text-muted-foreground">
-          Selected Value: <strong>{{ value[0] }}</strong>
-        </p>
-        <Slider v-bind="args" v-model="value" />
+        <Slider v-bind="args" :disabled="true" v-model="value" />
       </div>
     `,
   }),
