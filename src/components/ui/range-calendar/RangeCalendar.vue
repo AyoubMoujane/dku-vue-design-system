@@ -25,9 +25,30 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     weekdayFormat="short"
   >
     <RangeCalendarHeader>
-      <RangeCalendarPrevButton />
-      <RangeCalendarHeading />
-      <RangeCalendarNextButton />
+      <div>
+        Duration
+      </div>
+      <div class="flex w-full justify-center">
+        <div class="flex items-center">
+          <RangeCalendarPrevButton step="month"/>
+          <RangeCalendarHeading>
+            <template #default="{ headingValue }">
+              {{ headingValue.split(' ')[0] }}
+            </template>
+          </RangeCalendarHeading>          
+      <RangeCalendarNextButton step="month" />
+        </div>
+        <div class="flex items-center">
+          <RangeCalendarPrevButton step="year"/>
+          <RangeCalendarHeading>
+            <template #default="{ headingValue }">
+              {{ headingValue.split(' ')[1] }}
+            </template>
+          </RangeCalendarHeading>          
+      <RangeCalendarNextButton step="year"/>
+        </div>
+      </div>
+      
     </RangeCalendarHeader>
 
     <div class="flex flex-col gap-y-4 mt-4 sm:flex-row sm:gap-x-4 sm:gap-y-0 p-3">
