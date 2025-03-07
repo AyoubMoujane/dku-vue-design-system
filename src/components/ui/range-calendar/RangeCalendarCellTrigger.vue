@@ -26,7 +26,7 @@ const forwardedProps = useForwardProps(delegatedProps)
       // Selection End
       'data-[selection-end]:bg-[#214AB5] data-[selection-end]:text-primary-foreground data-[selection-end]:hover:bg-primary data-[selection-end]:hover:text-primary-foreground data-[selection-end]:focus:bg-primary data-[selection-end]:focus:text-primary-foreground',
       // Outside months
-      'data-[outside-view]:text-muted-foreground data-[outside-view]:opacity-50 [&[data-outside-view][data-selected]]:text-muted-foreground [&[data-outside-view][data-selected]]:opacity-30',
+      'data-[outside-view]:text-muted-foreground data-[outside-view]:opacity-0 [&[data-outside-view][data-selected]]:text-muted-foreground [&[data-outside-view][data-selected]]:opacity-30',
       // Disabled
       'data-[disabled]:text-muted-foreground data-[disabled]:opacity-50',
       // Unavailable

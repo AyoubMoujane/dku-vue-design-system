@@ -3,7 +3,7 @@
     <PopoverTrigger as-child>
       <Button variant="outline" class="w-[280px] justify-start text-left font-normal">
         <span>{{ formattedRange }}</span>
-        <CalendarIcon class="ml-auto h-4 w-4" />
+        <CalendarDays class="ml-auto h-4 w-4" />
       </Button>
     </PopoverTrigger>
     <PopoverContent class="w-auto p-0">
@@ -17,7 +17,7 @@ import { computed } from 'vue';
 import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover';
 import { Button } from '@/components/ui/button';
 import { RangeCalendar } from '@/components/ui/range-calendar';
-import { CalendarIcon } from 'lucide-vue-next';
+import { CalendarDays } from 'lucide-vue-next';
 import { CalendarDate } from '@internationalized/date';
 
 // Define props for modelValue
