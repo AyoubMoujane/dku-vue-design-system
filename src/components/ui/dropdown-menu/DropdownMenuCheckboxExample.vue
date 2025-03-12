@@ -6,6 +6,7 @@ import {
     DropdownMenuLabel,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
+    DropdownMenuItem,
 } from '@/components/ui/dropdown-menu'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Badge } from '@/components/ui/badge'
@@ -68,31 +69,31 @@ const unselectOption = (label: string) => {
         <DropdownMenuContent class="w-56">
             <DropdownMenuLabel>Appearance</DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <div class="p-2 hover:bg-[#D6E1FE]">
+            <DropdownMenuItem class="p-2 focus:bg-[#D6E1FE] active:bg-[#E5E5E5]">
                 <label class="flex items-center space-x-2">
                     <Checkbox v-model="allSelected" :indeterminate="indeterminate" />
                     <span>Select All</span>
                 </label>
-            </div>
+            </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <div class="p-2 hover:bg-[#D6E1FE]">
+            <DropdownMenuItem class="p-2 focus:bg-[#D6E1FE] active:bg-[#E5E5E5]">
                 <label class="flex items-center space-x-2">
                     <Checkbox v-model="showStatusBar" />
                     <span>Status Bar</span>
                 </label>
-            </div>
-            <div class="p-2 hover:bg-[#D6E1FE]">
+            </DropdownMenuItem>
+            <DropdownMenuItem class="p-2 focus:bg-[#D6E1FE] active:bg-[#E5E5E5]">
                 <label class="flex items-center space-x-2">
                     <Checkbox v-model="showActivityBar" />
                     <span>Activity Bar</span>
                 </label>
-            </div>
-            <div class="p-2 hover:bg-[#D6E1FE]">
+            </DropdownMenuItem>
+            <DropdownMenuItem class="p-2 focus:bg-[#D6E1FE] active:bg-[#E5E5E5]">
                 <label class="flex items-center space-x-2">
                     <Checkbox v-model="showPanel" />
                     <span>Panel</span>
                 </label>
-            </div>
+            </DropdownMenuItem>
         </DropdownMenuContent>
     </DropdownMenu>
 
@@ -106,7 +107,8 @@ const unselectOption = (label: string) => {
             </template>
         </div>
         <div class="border-l-2 mt-2">
-            <Button class="underline" v-if="selectedOptions.length > 0" variant="link" size="xs" @click="allSelected = false">
+            <Button class="underline" v-if="selectedOptions.length > 0" variant="link" size="xs"
+                @click="allSelected = false">
                 Clear all
             </Button>
         </div>
